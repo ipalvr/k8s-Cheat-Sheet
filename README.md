@@ -122,6 +122,10 @@ Create Deployment
 ```
 kubectl create deployment blue --image=nginx
 ```
+Create Deployment - Dry Run \ yaml
+```
+kubectl create deployment red --image=nginx --dry-run -o yaml > red.yaml
+```
 Scale Deployment 
 ```
 kubectl scale deployment blue --replicas=6
@@ -134,3 +138,26 @@ Create yaml file from a pod
 ```
 kubectl get pods elephant -o yaml > pod.yaml
 ```
+Set Affinity - Edit a Deployment
+```
+kubectl get deployment.apps blue -o yaml > blue.yaml
+```
+Add Affinity Config - (Under template > spec)
+```
+affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: color
+            operator: In
+            values:
+            - blue          
+```
+Delete previous deployment and create new with the yaml file
+```
+kubectl apply -f blue.yaml
+```
+
+
+            
