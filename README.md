@@ -46,22 +46,19 @@ List namespaces
 ```
 kubectl get ns
 ```
-kubctl get ns --no-headers (removes the header row)
+List namespaces (no headers)
+```
+kubctl get ns --no-headers 
 ```
 Specify namespace to get pods
 ```
-Kubectl -n namespace  get pods
+kubectl -n namespace  get pods
 ```
-DNS (pod.namespace.service.cluster.local)
-Mysql.connect("db-service.dev.svc.cluster.local")
-
-Services
-
-Create
+Create a Service
 ```
-Kubectl create -f service-definition.yml
+kubectl create -f service-definition.yml
 ```
-Get
+Get Service info
 ```
 kubectl get services or svc
 ```
@@ -77,9 +74,11 @@ Find image name in a deployment
 ```
 kubectl descripe deplyments.apps deployment_name | grep -i image
 ```
-Create a new service 
+Create a new service (command) 
 ```
 Kubectl expose deployment simple-webapp-deployment --name=webapp-service --target-port=8080 --type=NodePort --port=8080 --dry-run=client -o yaml > svc.yaml
+```
+Create a new service (file)
 ```
 kubectl apply -f svc.yaml
 ```
@@ -125,7 +124,7 @@ kubectl create deployment blue --image=nginx
 ```
 Scale Deployment 
 ```
-ubectl scale deployment blue --replicas=6
+kubectl scale deployment blue --replicas=6
 ```
 Produce yaml from an existing deployment
 ```
