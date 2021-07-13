@@ -164,7 +164,7 @@ kubectl get ds --all-namespaces
 ```
 Create yaml file, then edit and changed items to create a Daemonset
 ```
-kubectl create deployment elasticsearch --image-k8s.gcr.io/fluentd-elasticsearch"1.20 --dry-run -o yaml > elastic.yaml
+kubectl create deployment elasticsearch --image=k8s.gcr.io/fluentd-elasticsearch:1.20 --dry-run=client -o yaml > elastic.yaml
 ```
 
 
