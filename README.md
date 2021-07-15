@@ -168,4 +168,5 @@ kubectl create deployment elasticsearch --image=k8s.gcr.io/fluentd-elasticsearch
 ```
 
 
+
             
