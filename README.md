@@ -166,6 +166,24 @@ Create yaml file, then edit and changed items to create a Daemonset
 ```
 kubectl create deployment elasticsearch --image=k8s.gcr.io/fluentd-elasticsearch:1.20 --dry-run=client -o yaml > elastic.yaml
 ```
+Get logs from a pod
+```
+kubectl logs webapp-1
+```
+View containers on pod to view logging
+```
+kubectl logs webapp-2 -c
+```
+Stream events on a pod (One container)
+```
+kubectl logs -f event-simulator-pod
+```
+Stream events on a pod (Specific container)
+```
+kubectl logs -f event-simulator-pod event-simulator
+```
+
+
 
 
 
