@@ -209,6 +209,10 @@ Rollback
 ```
 kubectl rollout undo deployment/myapp-deployment
 ```
+Edit Deployment
+```
+kubectl edit deployments.app frontend
+```
 
 
 
