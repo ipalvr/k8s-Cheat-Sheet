@@ -213,7 +213,10 @@ Edit Deployment
 ```
 kubectl edit deployments.app frontend
 ```
-
+Create Config Map
+```
+kubectl create cm webapp-config-map --from-literal=APP_COLOR=darkblue
+```
 
 
 
