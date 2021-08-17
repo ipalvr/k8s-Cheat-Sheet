@@ -217,6 +217,11 @@ Create Config Map
 ```
 kubectl create cm webapp-config-map --from-literal=APP_COLOR=darkblue
 ```
+Explain yaml for pods (Available for other services as well
+```
+kubectl explain pods
+```
+
 
 
 
