@@ -34,6 +34,9 @@ Changing namespace context
 ```
 kubectl config set-context $(kubectl config current-context) --namespace=finance
 ```
+```
+kubectl config set-context --current --namespace=twistlock 
+```
 Specify namespace to list pods
 ```
 kubectl get pods --namespace-default
