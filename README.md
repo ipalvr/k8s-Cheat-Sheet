@@ -6,6 +6,14 @@ Create a deployment named "httpd-frontend" using the httpd:2.4-alpine image
 ```
 kubectl create deployment httpd-frontend --image=httpd:2.4-alpine
 ```
+Create a deployment named blue with the nginx image and 3 replicas
+```
+kubectl create deployment blue --image=nginx --replicas=3
+```
+Edit a depoyment
+```
+kubectl edit deployment blue
+```
 Scale the number of replicas to 3 in the httpd-frontend deployment
 ```
 kubectl scale deployment --replica=3 httpd-frontend
