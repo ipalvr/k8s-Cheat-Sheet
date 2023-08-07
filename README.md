@@ -232,6 +232,10 @@ Explain yaml for pods (Available for other services as well
 ```
 kubectl explain pods
 ```
+Get static pod info
+```
+cat /var/lib/kubelet/config.yaml
+```
 
 
 
